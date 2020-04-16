@@ -1,6 +1,7 @@
 package com.yun.maskdetector
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
@@ -40,6 +41,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(naverMap: NaverMap) {
         naverMap.locationSource = locationSource
         naverMap.locationTrackingMode = LocationTrackingMode.Follow
+
+        naverMap.addOnLocationChangeListener { location ->
+            val locationString = location.latitude.toString() + "," + location.longitude.toString()
+            Toast.makeText(this, locationString, Toast.LENGTH_SHORT).show()
+
+            viewModel.fetchStores(location.latitude.toFloat(), location.longitude.toFloat(), 5000)
+        }
     }
 
     companion object {

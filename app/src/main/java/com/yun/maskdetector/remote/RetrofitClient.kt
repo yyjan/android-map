@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-private const val BASE_URL = ""
+private const val BASE_URL = "https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/"
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
     Retrofit.Builder()
