@@ -19,9 +19,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
+        debug {
+            buildConfigField("String", "SERVER_URL", "\"https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/\"")
+            buildConfigField("String", "API_VERSION", "\"/v1\"")
+
+            debuggable true
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+        release {
+            buildConfigField("String", "SERVER_URL", "\"https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/\"")
+            buildConfigField("String", "API_VERSION", "\"/v1\"")
+
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
 
