@@ -11,7 +11,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.yun.maskdetector"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         multiDexEnabled true
         versionCode 1
@@ -63,6 +63,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
 
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.2.0'
     implementation 'com.google.maps.android:maps-ktx:1.4.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
 
