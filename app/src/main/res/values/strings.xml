@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MaskDetector</string>
     <string name="location">Location permission is required to use app</string>
+
+    <string name="remain_state_plenty">충분 100+</string>
+    <string name="remain_state_some">보통 30~99</string>
+    <string name="remain_state_few">부족 2~29</string>
+    <string name="remain_state_empty">없음</string>
 </resources>
